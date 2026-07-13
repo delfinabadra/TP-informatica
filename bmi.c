@@ -3,9 +3,18 @@ int main() {
     float peso, altura, bmi;
     printf("Ingrese su peso en kg: ");
     scanf("%f", &peso);
+    while (peso <=0) {
+        printf ("Error, el peso debe ser un numero positivo. \n");
+        printf ("Ingrese su peso en kg:");
+        scanf("%f", &peso);
+    } 
     printf("Ingrese su altura en metros: ");
     scanf("%f", &altura);
-    
+    while (altura <= 0) {
+        printf ("Error, la altura debe ser un numero positivo. \n");
+        printf("Ingrese su altura en metros: ");
+        scanf("%f", &altura);
+    }
     bmi = peso / (altura * altura);
     
     printf("Su BMI es: %.2f\n", bmi);
